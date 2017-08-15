@@ -12,7 +12,7 @@ output_dir=$(mktemp -d -t finalizeXXX)
 
 echo "-----> Build Dir: " $BUILD_DIR
 echo "-----> Cache Dir: " $CACHE_DIR
-echo "-----> Output Dir: " output_dir
+echo "-----> Output Dir: " $output_dir
 echo "-----> Running go build finalize from BUILDPACK DIR: " $BUILDPACK_DIR
 GOROOT=$GoInstallDir/go GOPATH=$BUILDPACK_DIR $GoInstallDir/go/bin/go build -o $output_dir/finalize golang/finalize/cli
 
